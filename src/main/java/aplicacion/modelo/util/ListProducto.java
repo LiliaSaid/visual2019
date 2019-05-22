@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author gabri
+ * 
  */
 public class ListProducto implements Serializable{
     private List<Producto> listProducto;

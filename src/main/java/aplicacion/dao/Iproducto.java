@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author gabri
+ * 
  */
 public interface Iproducto {
     List<Producto> obtener();

@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  *
- * @author gabri
+ * 
  */
 public class ProductoListDaoImp implements Serializable, Iproducto{
     private ListProducto listProducto;

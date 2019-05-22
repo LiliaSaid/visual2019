@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author gabri
+ * 
  */
 public class Producto implements Serializable{
     private String pro_codigo;

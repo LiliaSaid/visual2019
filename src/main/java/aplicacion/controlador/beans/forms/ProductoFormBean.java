@@ -17,7 +17,7 @@ import javax.faces.bean.ViewScoped;
 
 /**
  *
- * @author gabri
+ * 
  */
 @ManagedBean
 @ViewScoped
