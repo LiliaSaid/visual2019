@@ -9,8 +9,8 @@ import aplicacion.modelo.dominio.Producto;
 import java.util.List;
 
 /**
- *
- * 
+ * Definitos los metodos abstractos en nuestra interfaz
+ * @author LILI-PC
  */
 public interface Iproducto {
     List<Producto> obtener();

@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- *
+ *implementamos la interfaz Iproducto 
  * 
  */
 public class ProductoListDaoImp implements Serializable, Iproducto{
@@ -21,7 +21,10 @@ public class ProductoListDaoImp implements Serializable, Iproducto{
     public ProductoListDaoImp() {
         listProducto =  new ListProducto();
     }
-
+    /**
+     * obtiene la lista de productos
+     * @return  lista de productos
+     */
     @Override
     public List<Producto> obtener() {
         return listProducto.getListProducto();

@@ -8,8 +8,8 @@ package aplicacion.modelo.dominio;
 import java.io.Serializable;
 
 /**
- *
- * 
+ *Definimos los atributos de
+ * nuestra clase producto 
  */
 public class Producto implements Serializable{
     private String pro_codigo;
@@ -18,6 +18,14 @@ public class Producto implements Serializable{
     private String pro_tipo;
     private Integer pro_precio;
 
+    /**
+     * Constructor parametrizado 
+     * @param pro_codigo
+     * @param pro_nombre
+     * @param pro_marca
+     * @param pro_tipo
+     * @param pro_precio 
+     */
     public Producto(String pro_codigo, String pro_nombre, String pro_marca, String pro_tipo, Integer pro_precio) {
         this.pro_codigo = pro_codigo;
         this.pro_nombre = pro_nombre;
@@ -25,16 +33,25 @@ public class Producto implements Serializable{
         this.pro_tipo = pro_tipo;
         this.pro_precio = pro_precio;
     }
-
+/**
+ * constructor
+ */
     public Producto() {
     }
-
+/**
+ * Conctena los string que representan los datos de los productos
+ * @return los datos de un libro
+ */
     
     @Override
     public String toString() {
         return "Producto{" + "pro_codigo=" + pro_codigo + ", pro_nombre=" + pro_nombre + ", pro_marca=" + pro_marca + ", pro_tipo=" + pro_tipo + ", pro_precio=" + pro_precio + '}';
     }
 
+    /**
+     * Metodos accesores
+     * @return 
+     */
     public String getPro_codigo() {
         return pro_codigo;
     }

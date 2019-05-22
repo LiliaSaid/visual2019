@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * 
+ * Se inicializa la lista y se le agregan productos.
+ * ademas se agregan sus metodos accesores.
  */
 public class ListProducto implements Serializable{
     private List<Producto> listProducto;
-
+    
     public ListProducto() {
         listProducto = new ArrayList<>();
         
