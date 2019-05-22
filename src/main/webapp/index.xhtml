@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <style type="text/css">
+            .value {
+                font-weight: bold;
+            }
+
+            .noBorders *{
+                border: none !important;
+            }
+
+            .ui-datatable {
+                margin-bottom: 25px
+            }
+
+            .ui-datatable .ui-datatable-footer {
+                text-align:left;
+            }
+
+            .ui-datalist ul {
+                padding: 0 0 0 10px;
+                margin: 5px 0;
+            }
+
+            .ui-datatable .ui-button-icon-only .ui-button-text {
+                padding: 0;
+                line-height: 1.2;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        
+        <ui:composition template="./resources/Template/FcletTemplate.xhtml">
+            <ui:define name="content">
+                
+            
+                            
+
+        <p:panel id="pnlProjecto" header="Projecto">
+            <h:form id="form">
+                <p:imageCompare rightImage="/resources/img/Antes.png"
+                                leftImage="/resources/img/Despues.png"
+                                width="1200" height="300"/>
+                <p:sidebar widgetVar="sidebar5" position="top" baseZIndex="20000">
+                    <div style="height: 0px;">
+                    <left>
+                    <h2 style="font-weight:normal">Integrantes: </h2>
+                    <h1 style="font-weight:normal">Farfán, Samanta Lihué </h1>
+                    <h1 style="font-weight:normal">Rojas, Romina Nicole </h1>
+                    <h1 style="font-weight:normal">Said, Lilia Yazmin </h1>
+                    </left>
+                   </div>    
+                   
+                    <div >
+                    <center>                     
+                    <img src="https://m1.paperblog.com/i/394/3942415/anade-imagenes-tu-sidebar-L-q18eXO.jpeg" width="200" height="100" alt="casa"/>
+                       
+                    </center>
+                    </div >
+                    
+                    <p:commandButton value="Cerrar" oncomplete="PF('sidebar5').hide()"/>
+                    
+                </p:sidebar>
+
+                <p:commandButton value="Detalle de Integrantes" oncomplete="PF('sidebar5').show()"  />
+                <p:dataTable id="checkboxDT" var="prod" value="#{productoFormBean.obtener()}" 
+                             selection="#{productoFormBean.productoSeleccionado}" rowKey="#{prod.pro_codigo}" 
+                             style="margin-bottom:0">
+                    <f:facet name="header">
+                        Lista de Productos
+                    </f:facet>
+                    <p:column selectionMode="multiple" style="width:16px;text-align:center"/>
+                    <p:column headerText="Codigo">
+                        <h:outputText value="#{prod.pro_codigo}" />
+                    </p:column>
+                    <p:column headerText="Nombre">
+                        <h:outputText value="#{prod.pro_nombre}" />
+                    </p:column>
+                    <p:column headerText="Marca">
+                        <h:outputText value="#{prod.pro_marca}" />
+                    </p:column>
+                    <p:column headerText="Tipo">
+                        <h:outputText value="#{prod.pro_tipo}" />
+                    </p:column>
+                    <p:column headerText="Precio">
+                        <h:outputText value="#{prod.pro_precio}" />
+                    </p:column>
+                    <f:facet name="footer">
+                        <p:commandButton process="checkboxDT" update=":form:multiProdDialog" 
+                                         icon="pi pi-search" value="Comprar" 
+                                         oncomplete="PF('multiProdDialog').show()"/>
+                    </f:facet>
+                </p:dataTable>
+
+                <p:dialog header="Resumen de la Compra" widgetVar="multiProdDialog" modal="true" 
+                          showEffect="fade" hideEffect="fade" resizable="false" width="450">
+                    <p:outputPanel id="multiProdDialog" style="text-align:left;">
+                        <p:dataList id="ListProductos" styleClass="noBorders"
+                                    emptyMessage="Esta Lista esta vacia"
+                                    value="#{productoFormBean.productoSeleccionado}"
+                                    var="p">
+                            #{p.pro_codigo} #{p.pro_nombre} #{p.pro_marca} #{p.pro_tipo} #{p.pro_precio} 
+                        </p:dataList>
+                        <p:outputLabel id="lblTotal" value="Total: #{productoFormBean.obtenerPrecioTotal()}"/>
+                    </p:outputPanel>
+                </p:dialog>
+            </h:form>
+
+        </p:panel>
+                
+                </ui:define>
+        </ui:composition>
+    </h:body>
+
+</html>
+
