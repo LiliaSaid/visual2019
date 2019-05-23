@@ -6,7 +6,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Proyecto visual</title>
+         Proyecto visual 
         
     </h:head>
     <h:body>
@@ -43,7 +43,7 @@
                     
                 </p:sidebar>
 
-                <p:commandButton value="Detalle de Integrantes" oncomplete="PF('sidebar5').show()"  />
+                <p:commandButton value="Detalle" oncomplete="PF('sidebar5').show()"  />
                 <p:dataTable id="checkboxDT" var="prod" value="#{productoFormBean.obtener()}" 
                              selection="#{productoFormBean.productoSeleccionado}" rowKey="#{prod.pro_codigo}" 
                              style="margin-bottom:0">
