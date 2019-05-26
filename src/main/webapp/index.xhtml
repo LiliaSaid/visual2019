@@ -23,7 +23,7 @@
                 <p:imageCompare rightImage="/resources/img/Antes.png"
                                 leftImage="/resources/img/Despues.png"
                                 width="1200" height="300"/>
-                <p:sidebar widgetVar="sidebar5" position="top" baseZIndex="20000">
+                <p:sidebar widgetVar="sidebar5" position="bottom" baseZIndex="20000">
                     <div style="height: 0px;">
                     <left>
                     <h2 style="font-weight:normal">Integrantes: </h2>
@@ -46,26 +46,26 @@
 
                 <p:commandButton value="Detalle integrantes" oncomplete="PF('sidebar5').show()"  />
                 <p:dataTable id="checkboxDT" var="prod" value="#{productoFormBean.obtener()}" 
-                             selection="#{productoFormBean.productoSeleccionado}" rowKey="#{prod.pro_codigo}" 
+                             selection="#{productoFormBean.listaProductoSeleccionado}" rowKey="#{prod.proCodigo}" 
                              style="margin-bottom:0">
                     <f:facet name="header">
                         Lista de Productos
                     </f:facet>
                     <p:column selectionMode="multiple" style="width:16px;text-align:center"/>
                     <p:column headerText="Codigo">
-                        <h:outputText value="#{prod.pro_codigo}" />
+                        <h:outputText value="#{prod.proCodigo}" />
                     </p:column>
                     <p:column headerText="Nombre">
-                        <h:outputText value="#{prod.pro_nombre}" />
+                        <h:outputText value="#{prod.proNombre}" />
                     </p:column>
                     <p:column headerText="Marca">
-                        <h:outputText value="#{prod.pro_marca}" />
+                        <h:outputText value="#{prod.proMarca}" />
                     </p:column>
                     <p:column headerText="Tipo">
-                        <h:outputText value="#{prod.pro_tipo}" />
+                        <h:outputText value="#{prod.proTipo}" />
                     </p:column>
                     <p:column headerText="Precio">
-                        <h:outputText value="#{prod.pro_precio}" />
+                        <h:outputText value="#{prod.proPrecio}" />
                     </p:column>
                     <f:facet name="footer">
                         <p:commandButton process="checkboxDT" update=":form:multiProdDialog" 
@@ -79,9 +79,9 @@
                     <p:outputPanel id="multiProdDialog" style="text-align:left;">
                         <p:dataList id="ListProductos" styleClass="noBorders"
                                     emptyMessage="Esta Lista esta vacia"
-                                    value="#{productoFormBean.productoSeleccionado}"
+                                    value="#{productoFormBean.listaProductoSeleccionado}"
                                     var="p">
-                            #{p.pro_codigo} #{p.pro_nombre} #{p.pro_marca} #{p.pro_tipo} #{p.pro_precio} 
+                            #{p.proCodigo} #{p.proNombre} #{p.proMarca} #{p.proTipo} #{p.proPrecio} 
                         </p:dataList>
                         <p:outputLabel id="lblTotal" value="Total: #{productoFormBean.obtenerPrecioTotal()}"/>
                     </p:outputPanel>

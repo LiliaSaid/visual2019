@@ -12,26 +12,26 @@ import java.io.Serializable;
  * nuestra clase producto 
  */
 public class Producto implements Serializable{
-    private String pro_codigo;
-    private String pro_nombre;
-    private String pro_marca;
-    private String pro_tipo;
-    private Integer pro_precio;
+    private String proCodigo;
+    private String proNombre;
+    private String proMarca;
+    private String proTipo;
+    private Integer proPrecio;
 
     /**
      * Constructor parametrizado 
-     * @param pro_codigo
-     * @param pro_nombre
-     * @param pro_marca
-     * @param pro_tipo
-     * @param pro_precio 
+     * @param proCodigo
+     * @param proNombre
+     * @param proMarca
+     * @param proTipo
+     * @param proPrecio 
      */
-    public Producto(String pro_codigo, String pro_nombre, String pro_marca, String pro_tipo, Integer pro_precio) {
-        this.pro_codigo = pro_codigo;
-        this.pro_nombre = pro_nombre;
-        this.pro_marca = pro_marca;
-        this.pro_tipo = pro_tipo;
-        this.pro_precio = pro_precio;
+    public Producto(String proCodigo, String proNombre, String proMarca, String proTipo, Integer proPrecio) {
+        this.proCodigo = proCodigo;
+        this.proNombre = proNombre;
+        this.proMarca = proMarca;
+        this.proTipo = proTipo;
+        this.proPrecio = proPrecio;
     }
 /**
  * constructor
@@ -45,51 +45,51 @@ public class Producto implements Serializable{
     
     @Override
     public String toString() {
-        return "Producto{" + "pro_codigo=" + pro_codigo + ", pro_nombre=" + pro_nombre + ", pro_marca=" + pro_marca + ", pro_tipo=" + pro_tipo + ", pro_precio=" + pro_precio + '}';
+        return "Producto{" + "proCodigo=" + proCodigo + ", proNombre=" + proNombre + ", proMarca=" + proMarca + ", proTipo=" + proTipo + ", proPrecio=" + proPrecio + '}';
     }
 
     /**
      * Metodos accesores
      * @return 
      */
-    public String getPro_codigo() {
-        return pro_codigo;
+    public String getProCodigo() {
+        return proCodigo;
     }
 
-    public void setPro_codigo(String pro_codigo) {
-        this.pro_codigo = pro_codigo;
+    public void setProCodigo(String proCodigo) {
+        this.proCodigo = proCodigo;
     }
 
-    public String getPro_nombre() {
-        return pro_nombre;
+    public String getProNombre() {
+        return proNombre;
     }
 
-    public void setPro_nombre(String pro_nombre) {
-        this.pro_nombre = pro_nombre;
+    public void setProNombre(String proNombre) {
+        this.proNombre = proNombre;
     }
 
-    public String getPro_marca() {
-        return pro_marca;
+    public String getProMarca() {
+        return proMarca;
     }
 
-    public void setPro_marca(String pro_marca) {
-        this.pro_marca = pro_marca;
+    public void setProMarca(String proMarca) {
+        this.proMarca = proMarca;
     }
 
-    public String getPro_tipo() {
-        return pro_tipo;
+    public String getProTipo() {
+        return proTipo;
     }
 
-    public void setPro_tipo(String pro_tipo) {
-        this.pro_tipo = pro_tipo;
+    public void setProTipo(String proTipo) {
+        this.proTipo = proTipo;
     }
 
-    public Integer getPro_precio() {
-        return pro_precio;
+    public Integer getProPrecio() {
+        return proPrecio;
     }
 
-    public void setPro_precio(Integer pro_precio) {
-        this.pro_precio = pro_precio;
+    public void setPro_precio(Integer proPrecio) {
+        this.proPrecio = proPrecio;
     }
     
     

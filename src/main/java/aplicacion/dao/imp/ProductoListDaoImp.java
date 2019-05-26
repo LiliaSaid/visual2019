@@ -23,6 +23,7 @@ public class ProductoListDaoImp implements Serializable, Iproducto{
     }
     /**
      * obtiene la lista de productos
+     * metodo definido en la interfaz
      * @return  lista de productos
      */
     @Override

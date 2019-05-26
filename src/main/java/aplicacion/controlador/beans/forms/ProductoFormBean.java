@@ -24,7 +24,7 @@ import javax.faces.bean.ViewScoped;
 public class ProductoFormBean implements Serializable{
     private Iproducto productoDAO;
     private Producto producto;
-    private List<Producto> productoSeleccionado ;
+    private List<Producto> listaProductoSeleccionado ;
     
     /**
      * Creates a new instance of ProductoFormBean
@@ -32,7 +32,7 @@ public class ProductoFormBean implements Serializable{
     public ProductoFormBean() {
         productoDAO = new ProductoListDaoImp();
         producto = new Producto();
-        productoSeleccionado = new ArrayList<>();
+        listaProductoSeleccionado = new ArrayList<>();
         
     }
 
@@ -55,18 +55,18 @@ public class ProductoFormBean implements Serializable{
         this.producto = producto;
     }
 
-    public List<Producto> getProductoSeleccionado() {
-        return productoSeleccionado;
+    public List<Producto> getListaProductoSeleccionado() {
+        return listaProductoSeleccionado;
     }
 
-    public void setProductoSeleccionado(List<Producto> productoSeleccionado) {
-        this.productoSeleccionado = productoSeleccionado;
+    public void setListaProductoSeleccionado(List<Producto> listaProductoSeleccionado) {
+        this.listaProductoSeleccionado = listaProductoSeleccionado;
     }
     
     public Integer obtenerPrecioTotal(){
         Integer Total = 0;
-        for (Producto p:productoSeleccionado){
-            Total += p.getPro_precio();
+        for (Producto p:listaProductoSeleccionado){
+            Total += p.getProPrecio();
         }
         return Total;
     }
