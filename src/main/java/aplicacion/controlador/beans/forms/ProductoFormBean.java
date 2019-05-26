@@ -63,10 +63,10 @@ public class ProductoFormBean implements Serializable{
         this.listaProductoSeleccionado = listaProductoSeleccionado;
     }
     
-    public Integer obtenerPrecioTotal(){
+    public Integer getPrecioTotal(){
         Integer Total = 0;
         for (Producto p:listaProductoSeleccionado){
-            Total += p.getProPrecio();
+            Total += p.getPrecio();
         }
         return Total;
     }

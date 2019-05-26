@@ -12,26 +12,26 @@ import java.io.Serializable;
  * nuestra clase producto 
  */
 public class Producto implements Serializable{
-    private String proCodigo;
-    private String proNombre;
-    private String proMarca;
-    private String proTipo;
-    private Integer proPrecio;
+    private String codigo;
+    private String nombre;
+    private String marca;
+    private String tipo;
+    private Integer precio;
 
     /**
      * Constructor parametrizado 
-     * @param proCodigo
-     * @param proNombre
-     * @param proMarca
-     * @param proTipo
-     * @param proPrecio 
+     * @param codigo
+     * @param nombre
+     * @param marca
+     * @param tipo   
+     * @param precio 
      */
-    public Producto(String proCodigo, String proNombre, String proMarca, String proTipo, Integer proPrecio) {
-        this.proCodigo = proCodigo;
-        this.proNombre = proNombre;
-        this.proMarca = proMarca;
-        this.proTipo = proTipo;
-        this.proPrecio = proPrecio;
+    public Producto(String codigo, String nombre, String marca, String tipo, Integer precio) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.marca = marca;
+        this.tipo = tipo;
+        this.precio = precio;
     }
 /**
  * constructor
@@ -45,52 +45,51 @@ public class Producto implements Serializable{
     
     @Override
     public String toString() {
-        return "Producto{" + "proCodigo=" + proCodigo + ", proNombre=" + proNombre + ", proMarca=" + proMarca + ", proTipo=" + proTipo + ", proPrecio=" + proPrecio + '}';
+        return "Producto{" + "codigo=" + codigo + ", nombre=" + nombre + ", marca=" + marca + ", tipo=" + tipo + ", precio=" + precio + '}';
     }
 
     /**
      * Metodos accesores
      * @return 
      */
-    public String getProCodigo() {
-        return proCodigo;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setProCodigo(String proCodigo) {
-        this.proCodigo = proCodigo;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
-    public String getProNombre() {
-        return proNombre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setProNombre(String proNombre) {
-        this.proNombre = proNombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getProMarca() {
-        return proMarca;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setProMarca(String proMarca) {
-        this.proMarca = proMarca;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public String getProTipo() {
-        return proTipo;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setProTipo(String proTipo) {
-        this.proTipo = proTipo;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public Integer getProPrecio() {
-        return proPrecio;
+    public Integer getPrecio() {
+        return precio;
     }
 
-    public void setPro_precio(Integer proPrecio) {
-        this.proPrecio = proPrecio;
+    public void setPrecio(Integer precio) {
+        this.precio = precio;
     }
-    
     
 }

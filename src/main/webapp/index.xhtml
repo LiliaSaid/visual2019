@@ -46,26 +46,26 @@
 
                 <p:commandButton value="Detalle integrantes" oncomplete="PF('sidebar5').show()"  />
                 <p:dataTable id="checkboxDT" var="prod" value="#{productoFormBean.obtener()}" 
-                             selection="#{productoFormBean.listaProductoSeleccionado}" rowKey="#{prod.proCodigo}" 
+                             selection="#{productoFormBean.listaProductoSeleccionado}" rowKey="#{prod.codigo}" 
                              style="margin-bottom:0">
                     <f:facet name="header">
                         Lista de Productos
                     </f:facet>
                     <p:column selectionMode="multiple" style="width:16px;text-align:center"/>
                     <p:column headerText="Codigo">
-                        <h:outputText value="#{prod.proCodigo}" />
+                        <h:outputText value="#{prod.codigo}" />
                     </p:column>
                     <p:column headerText="Nombre">
-                        <h:outputText value="#{prod.proNombre}" />
+                        <h:outputText value="#{prod.nombre}" />
                     </p:column>
                     <p:column headerText="Marca">
-                        <h:outputText value="#{prod.proMarca}" />
+                        <h:outputText value="#{prod.marca}" />
                     </p:column>
                     <p:column headerText="Tipo">
-                        <h:outputText value="#{prod.proTipo}" />
+                        <h:outputText value="#{prod.tipo}" />
                     </p:column>
                     <p:column headerText="Precio">
-                        <h:outputText value="#{prod.proPrecio}" />
+                        <h:outputText value="#{prod.precio}" />
                     </p:column>
                     <f:facet name="footer">
                         <p:commandButton process="checkboxDT" update=":form:multiProdDialog" 
@@ -81,9 +81,9 @@
                                     emptyMessage="Esta Lista esta vacia"
                                     value="#{productoFormBean.listaProductoSeleccionado}"
                                     var="p">
-                            #{p.proCodigo} #{p.proNombre} #{p.proMarca} #{p.proTipo} #{p.proPrecio} 
+                            #{p.codigo} #{p.nombre} #{p.marca} #{p.tipo} #{p.precio} 
                         </p:dataList>
-                        <p:outputLabel id="lblTotal" value="Total: #{productoFormBean.obtenerPrecioTotal()}"/>
+                        <p:outputLabel id="lblTotal" value="Total: #{productoFormBean.getPrecioTotal()}"/>
                     </p:outputPanel>
                 </p:dialog>
             </h:form>
