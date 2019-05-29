@@ -36,7 +36,7 @@ public class Producto implements Serializable{
 /**
  * constructor
  */
-    public Producto() {
+    public Producto() {        
     }
 /**
  * Conctena los string que representan los datos de los productos
